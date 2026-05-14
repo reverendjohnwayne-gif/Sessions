@@ -78,14 +78,15 @@ function App() {
           </div>
 
           {/* Progress Bar */}
-          <div style={{width:'100%', height:'8px', borderRadius:'99px', background: JASON_THEME.barColor, overflow:'hidden', position:'relative', boxShadow:`0 0 12px ${JASON_THEME.glow}`}}>
+          <div style={{fontSize:'0.55rem', color:'#475569', letterSpacing:'0.15em', textTransform:'uppercase', fontWeight:700}}>⚡ TUG OF WAR</div>
+          <div style={{width:'100%', height:'14px', borderRadius:'99px', background: JASON_THEME.barColor, overflow:'hidden', position:'relative', boxShadow:`0 0 20px ${JASON_THEME.glow}, 0 0 8px ${JASON_THEME.glow}`}}>
             <div style={{
               width:`${p1Percentage}%`,
               height:'100%',
               background: ADAM_THEME.barColor,
               borderRadius:'99px',
               transition:'width 1s ease-out',
-              boxShadow:`0 0 12px ${ADAM_THEME.glow}`,
+              boxShadow:`0 0 20px ${ADAM_THEME.glow}, 0 0 8px ${ADAM_THEME.glow}`,
             }}/>
             {/* Center tick */}
             <div style={{position:'absolute', top:0, bottom:0, left:'50%', width:'2px', background:'rgba(255,255,255,0.3)', transform:'translateX(-50%)'}}/>
