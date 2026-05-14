@@ -159,7 +159,20 @@ function App() {
                 gap:'1rem',
               }}>
                 <div style={{textAlign:'center', marginBottom:'0.5rem'}}>
-                  <div style={{fontSize:'2.5rem', marginBottom:'8px'}}>⚔️</div>
+                  <div style={{marginBottom:'8px', display:'flex', justifyContent:'center'}}>
+                    <svg width="52" height="52" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      {/* Sword 1 - top-left to bottom-right */}
+                      <line x1="3" y1="3" x2="21" y2="21" stroke={JASON_THEME.accent} strokeWidth="2.5" strokeLinecap="round"/>
+                      <polygon points="3,3 3,7 7,3" fill={JASON_THEME.accent}/>
+                      <line x1="18" y1="21" x2="21" y2="18" stroke={JASON_THEME.accent} strokeWidth="1.5" strokeLinecap="round"/>
+                      {/* Sword 2 - top-right to bottom-left */}
+                      <line x1="21" y1="3" x2="3" y2="21" stroke={ADAM_THEME.accent} strokeWidth="2.5" strokeLinecap="round"/>
+                      <polygon points="21,3 17,3 21,7" fill={ADAM_THEME.accent}/>
+                      <line x1="6" y1="21" x2="3" y2="18" stroke={ADAM_THEME.accent} strokeWidth="1.5" strokeLinecap="round"/>
+                      {/* Center clash glow */}
+                      <circle cx="12" cy="12" r="2.5" fill="white" opacity="0.9"/>
+                    </svg>
+                  </div>
                   <h3 style={{fontSize:'1.4rem', fontWeight:800, color:'#e2e8f0', marginBottom:'4px'}}>Challenger Approaching</h3>
                   <p style={{fontSize:'0.82rem', color:'#64748b'}}>Jason — paste your Alpaca Paper API keys to enter the arena.</p>
                 </div>
