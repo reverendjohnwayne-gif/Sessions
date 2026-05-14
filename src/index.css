@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --font-family: 'Inter', sans-serif;
+  --text-primary: #e2e8f0;
+  --text-secondary: #64748b;
+  --bg-dark: #0f1115; /* Deep professional dark mode */
+  --surface-1: #16181d;
+  --surface-2: #1e2128;
+  --border-color: rgba(255, 255, 255, 0.05);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--bg-dark);
+  color: var(--text-primary);
+  overflow-x: hidden;
+}
+
+/* Minimal Surface Classes */
+.surface {
+  background: var(--surface-1);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+}
+
+.surface-hover {
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.surface-hover:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Buttons */
+.btn {
+  background: var(--surface-2);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn.primary {
+  background: #3b82f6;
+  border-color: #2563eb;
+  color: white;
+}
+
+.btn.primary:hover { background: #60a5fa; }
+
+.btn.danger {
+  background: rgba(248, 113, 113, 0.1);
+  border-color: rgba(248, 113, 113, 0.2);
+  color: #f87171;
+}
+
+.btn.danger:hover {
+  background: rgba(248, 113, 113, 0.2);
+}
+
+/* Inputs */
+.input {
+  background: var(--surface-2);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  color: var(--text-primary);
+  padding: 0.5rem 0.75rem;
+  outline: none;
+  font-size: 0.875rem;
+  width: 100%;
+  transition: border-color 0.15s ease;
+}
+
+.input:focus {
+  border-color: #3b82f6;
+}
+
+/* Utilities */
+.text-green { color: #4ade80; }
+.text-red { color: #f87171; }
+.bg-green { background: #4ade80; }
+.bg-red { background: #f87171; }
+
+/* Custom Scrollbar for compact lists */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent; 
+}
+::-webkit-scrollbar-thumb {
+  background: var(--surface-2); 
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #475569; 
+}
