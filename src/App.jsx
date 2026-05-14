@@ -44,7 +44,7 @@ function App() {
         background:'#111318',
         borderBottom:'1px solid rgba(255,255,255,0.06)',
         padding:'0 1.5rem',
-        height:'70px',
+        height:'82px',
         display:'flex',
         alignItems:'center',
         justifyContent:'space-between',
@@ -78,8 +78,7 @@ function App() {
           </div>
 
           {/* Progress Bar */}
-          <div style={{fontSize:'0.55rem', color:'#475569', letterSpacing:'0.15em', textTransform:'uppercase', fontWeight:700}}>⚡ TUG OF WAR</div>
-          <div style={{width:'100%', height:'14px', borderRadius:'99px', background: JASON_THEME.barColor, overflow:'hidden', position:'relative', boxShadow:`0 0 20px ${JASON_THEME.glow}, 0 0 8px ${JASON_THEME.glow}`}}>
+          <div style={{width:'100%', height:'14px', borderRadius:'99px', background: JASON_THEME.barColor, overflow:'hidden', position:'relative', boxShadow:`0 0 24px ${JASON_THEME.glow}, 0 0 10px ${JASON_THEME.glow}`}}>
             <div style={{
               width:`${p1Percentage}%`,
               height:'100%',
@@ -197,17 +196,16 @@ function App() {
 
                 <button
                   onClick={() => { if (p2Key && p2Secret) setP2Connected(true); }}
-                  disabled={!p2Key || !p2Secret}
                   style={{
                     background: JASON_THEME.accent,
                     border:'none', borderRadius:'8px',
                     color:'white', padding:'0.75rem',
                     fontWeight:700, fontSize:'0.9rem',
-                    cursor: p2Key && p2Secret ? 'pointer' : 'not-allowed',
-                    opacity: p2Key && p2Secret ? 1 : 0.4,
+                    cursor:'pointer',
+                    opacity: 1,
                     display:'flex', alignItems:'center', justifyContent:'center', gap:'8px',
-                    boxShadow:`0 0 20px ${JASON_THEME.glow}`,
-                    transition:'opacity 0.2s',
+                    boxShadow:`0 0 24px ${JASON_THEME.glow}`,
+                    transition:'all 0.2s',
                   }}
                 >
                   ▶ Enter the Arena
