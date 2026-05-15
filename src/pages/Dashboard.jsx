@@ -2,8 +2,8 @@ import { useState, useEffect } from 'react';
 import { TrendingUp, TrendingDown, DollarSign, Activity } from 'lucide-react';
 import { LineChart, Line, ResponsiveContainer, Tooltip, YAxis } from 'recharts';
 
-const API_KEY = 'PKAP5RKWRC7W25ZKABFH43VZQS';
-const SECRET_KEY = '9KvQUdXAaqjDthGTNkMPmg9Y7TSCMVz8VyoJmym9xT4r';
+const API_KEY = import.meta.env.VITE_ALPACA_KEY_ID;
+const SECRET_KEY = import.meta.env.VITE_ALPACA_SECRET_KEY;
 const HEADERS = {
   'APCA-API-KEY-ID': API_KEY,
   'APCA-API-SECRET-KEY': SECRET_KEY,

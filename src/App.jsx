@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import PlayerPanel from './components/PlayerPanel';
 
-const ADAM_API_KEY = 'PKAP5RKWRC7W25ZKABFH43VZQS';
-const ADAM_SECRET = '9KvQUdXAaqjDthGTNkMPmg9Y7TSCMVz8VyoJmym9xT4r';
+const ADAM_API_KEY = import.meta.env.VITE_ALPACA_KEY_ID;
+const ADAM_SECRET = import.meta.env.VITE_ALPACA_SECRET_KEY;
 
 // Player color themes
 const ADAM_THEME = {

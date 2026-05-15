@@ -1,8 +1,9 @@
+require('dotenv').config();
 const Alpaca = require('@alpacahq/alpaca-trade-api');
 
 const alpaca = new Alpaca({
-  keyId: 'PKAP5RKWRC7W25ZKABFH43VZQS',
-  secretKey: '9KvQUdXAaqjDthGTNkMPmg9Y7TSCMVz8VyoJmym9xT4r',
+  keyId: process.env.ALPACA_KEY_ID,
+  secretKey: process.env.ALPACA_SECRET_KEY,
   paper: true
 });
 
